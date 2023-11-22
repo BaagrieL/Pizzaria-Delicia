@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pizzaria Delícia</title>
+
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar__brand">enu
+        <img
+          class="navbar__logo"
+          src="logo.png"
+          alt="Pizzaria Shop logo"
+        />
+        <p class="navbar__title">Pizzaria <span>Delícia</span></p>
+      </div>
+
+      <ul class="navbar__links">
+        <li><a href="#menu">cardápio</a></li>
+        <li><a href="#drinks">bebidas</a></li>
+        <li><a href="#location">localização</a></li>
+        <li><button class="button button--primary">peça agora</button></li>
+      </ul>
+    </nav>
+
+    <section class="hero-header">
+      <div class="hero-header__container">
+        <div class="hero-header__content">
+          <h1 class="section__title">
+            Produtos <span>Frescos</span>, selecionados <span>a dedo</span>!
+          </h1>
+        </div>
+    </section>
+
+    <section class="menu" id="menu">
+      <div>
+        <h2 class="section__title">cardápio</h2>
+        <p class="section__subtitle">
+          Nossas Pizzas, feitas <span>especialmente</span> para você!
+        </p>
+      </div>
+
+      <div class="menu__cards">
+        <div class="card">
+
+          <p class="card__title">Frango</p>
+
+          <ul class="card__ingredients">
+            <li></li>
+            <li>Frango</li>
+            <li>Queijo</li>
+            <li>Ovo Cozido</li>
+            <li>cebola roxa</li>
+            <li>Azeitona</li>
+            <li>Borda Recheada de Catupiry ou Cheddar</li>
+          </ul>
+
+            <button class="button button--primary card__price" onclick="adicionarAoCarrinho('Frango ', 18)">R$18,00</button>
+
+        </div>
+
+        <div class="card">
+          <p class="card__title">Portuguesa</p>
+
+          <ul class="card__ingredients">
+            <li>Mussarela</li>
+            <li>Presunto</li>
+            <li>Ovo Cozido</li>
+            <li>cebola roxa</li>
+            <li>Azeitona</li>
+            <li>Borda Recheada de Catupiry ou Cheddar</li>
+          </ul>
+
+          <button class="button button--primary card__price" onclick="adicionarAoCarrinho('Portuguesa ', 20)">R$20,00</button>
+        </div>
+
+        <div class="card">
+          <p class="card__title">Mista</p>
+
+          <ul class="card__ingredients">
+            <li>Queijo</li>
+            <li>Presunto</li>
+            <li>cebola roxa</li>
+            <li>Borda Recheada de Catupiry ou Cheddar</li>
+          </ul>
+
+          <button class="button button--primary card__price" onclick="adicionarAoCarrinho('Mista ', 18)">R$18,00</button>
+        </div>
+
+        <div class="card">
+          <p class="card__title">Carne do sol</p>
+  
+          <ul class="card__ingredients">
+            <li>Queijo</li>
+            <li>Carne do sol</li>
+            <li>cebola roxa</li>
+            <li>Borda Recheada de Catupiry ou Cheddar</li>
+          </ul>
+  
+          <button class="button button--primary card__price" onclick="adicionarAoCarrinho('Carne do sol', 30)">R$30,00</button>
+        </div>
+      </div>
+      </div>
+
+
+
+      <div>
+        <h2 class="section__title">bebidas</h2>
+        <p class="section__subtitle">
+          Nossa seleção especial de bebidas para acompanhar nossos hambúrgueres.
+        </p>
+      </div>
+
+      <div class="drinks" id="drinks">
+        <div class="drinks__container">
+          <div class="drinks__items">
+            <p class="drinks__title">bebida</p>
+
+            <p class="drinks__details">refrigerante</p>
+
+            <p class="drinks__details">água s/ gás</p>
+
+            <p class="drinks__details">água c/ gás</p>
+
+            <p class="drinks__details">amstel 600ml</p>
+
+            <p class="drinks__details">skol 600ml</p>
+
+            <p class="drinks__details">brahma 600ml</p>
+
+            <p class="drinks__details">sex on the beach</p>
+            <p class="drinks__details">cosmopolitan</p>
+
+            <p class="drinks__details">caipirinha de limão</p>
+          </div>
+
+          <div class="drinks__price">
+            <p class="drinks__title">valor</p>
+            <p class="drinks__details">R$ 5,00</p>
+            <p class="drinks__details">R$ 5,00</p>
+            <p class="drinks__details">R$ 5,00</p>
+            <p class="drinks__details">R$ 10,00</p>
+            <p class="drinks__details">R$ 9,00</p>
+            <p class="drinks__details">R$ 9,00</p>
+            <p class="drinks__details">R$ 12,00</p>
+            <p class="drinks__details">R$ 13,00</p>
+            <p class="drinks__details">R$ 15,00</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="drinks" id="drinks">
+        <div class="drinks__container">
+          <div class="drinks__items">
+            <div class="cart">
+              <h2>Carrinho de Compras</h2>
+              <ul id="cart-items"></ul>
+              <p id="total">Total:</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+    </section>
+
+    
+
+    <section class="location" id="location">
+      <div>
+        <h2 class="section__title">localização</h2>
+        <p class="section__subtitle">veja como é fácil vir até o deburguer</p>
+      </div>
+
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1071.9446891581472!2d-38.58392488992443!3d-3.700348181617408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7c74a0906b18879%3A0x82dd43379c4affb6!2sEscola%20Estadual%20de%20Educa%C3%A7%C3%A3o%20Profissional%20Paulo%20Petrola!5e0!3m2!1spt-BR!2sbr!4v1700583801187!5m2!1spt-BR!2sbr" 
+      width="600" 
+      height="450" 
+      style="border:0;" 
+      allowfullscreen="" 
+      loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+
+      <p class="location__address">T. Castelo s/n</p>
+    </section>
+
+    <footer class="footer">
+      <div class="footer__container">
+        <div>
+          <h2 class="section__title">peça <span>agora mesmo</span>!</h2>
+          <p class="section__subtitle">entregamos em toda cidade</p>
+        </div>
+
+        <button class="button button--primary">pedir a sua pizza da Pizzaria Delícia</button>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
