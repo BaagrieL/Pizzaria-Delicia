@@ -164,7 +164,7 @@
   align-items: center;
   justify-content: center;
   gap: 48px;
-  padding: 15px 250px 0px 250px;
+  padding: 15px 5%;
 }
 
 .section__title {
@@ -228,7 +228,7 @@
 }
 
 .card:nth-child(4) {
-  background-image:  linear-gradient(rgba(29, 29, 29, 0.5), rgba(29, 29, 29, 0.5)), url('imagens/mista.jpg');
+  background-image:  linear-gradient(rgba(29, 29, 29, 0.5), rgba(29, 29, 29, 0.5)), url('imagens/carne.webp');
   background-repeat: no-repeat;
 
 }
