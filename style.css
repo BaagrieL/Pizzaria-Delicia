@@ -212,23 +212,23 @@
 }
 
 .card:nth-child(1) {
-  background-image:  linear-gradient(rgba(29, 29, 29, 0.4), rgba(29, 29, 29, 0.4)), url('frango.jpg');
+  background-image:  linear-gradient(rgba(29, 29, 29, 0.4), rgba(29, 29, 29, 0.4)), url('imagens/frango.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
 .card:nth-child(2) {
-  background-image: linear-gradient(rgba(29, 29, 29, 0.5), rgba(29, 29, 29, 0.5)), url('calabresa.jpg');
+  background-image: linear-gradient(rgba(29, 29, 29, 0.5), rgba(29, 29, 29, 0.5)), url('imagens/calabresa.jpg');
   
 }
 
 .card:nth-child(3) {
-  background-image:  linear-gradient(rgba(29, 29, 29, 0.5), rgba(29, 29, 29, 0.5)), url('mista.jpg');
+  background-image:  linear-gradient(rgba(29, 29, 29, 0.5), rgba(29, 29, 29, 0.5)), url('imagens/mista.jpg');
 }
 
 .card:nth-child(4) {
-  background-image:  linear-gradient(rgba(29, 29, 29, 0.5), rgba(29, 29, 29, 0.5)), url('carnee.jpg');
+  background-image:  linear-gradient(rgba(29, 29, 29, 0.5), rgba(29, 29, 29, 0.5)), url('imagens/mista.jpg');
   background-repeat: no-repeat;
 
 }
