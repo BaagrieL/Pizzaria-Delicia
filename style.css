@@ -1,8 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/brush');
+@import url('https://fonts.cdnfonts.com/css/cupid-love-2');
+
 :root {
     --black: #000;
     --gray-100: #e5e5e5;
     --gray-900: #14100c;
-    --primary: #f8af35;
+    --primary: #E63946;
     --white: #fff;
   }
   * {
@@ -20,19 +24,29 @@
     --black: #000;
     --gray-100: #e5e5e5;
     --gray-900: #14100c;
-    --primary: #f8af35;
+    --primary: #dd2d2d;
     --white: #fff;
   }
   
   .navbar {
+    position: fixed;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: var(--black);
     padding: 20px 36px;
-    font-family: 'Insaniburger with Cheese', sans-serif;
+    font-family: 'Cupid Love', sans-serif;
     gap: 20px;
+    z-index: 1;
   }
+
+  /* Adicione este trecho ao final do seu CSS */
+.navbar__cart {
+  display: flex;
+  align-items: center;
+}
+
   
   .navbar__title {
     color: var(--white);
@@ -40,12 +54,28 @@
     line-height: 44px;
     text-transform: uppercase;
     text-align: center;
+    transition: all 200ms ease-in;
+  }
+
+  .navbar__title{
+    
+  }
+
+  .navbar__title:hover {
+    padding: 0.5rem 1rem 1.2rem 1rem;
+    color: #a91414;
+    border-bottom: 3px solid #a91414;
   }
   
   .navbar__brand {
     display: flex;
     align-items: center;
     gap: 24px;
+  }
+
+  .navbar__brand img {
+    height: 3rem;
+    width: 3rem;
   }
   
   .navbar__title span {
@@ -62,7 +92,14 @@
     color: var(--white);
     text-transform: uppercase;
     text-decoration: none;
+    font-size: 20px;
   }
+
+  .navbar__links li a i {
+    font-size: 30px;
+
+  }
+
   
   .navbar__links li a,
   .navbar__links .button {
@@ -102,33 +139,40 @@
   }
   
   body {
+    font-size: 62.5%;
   background-color: var(--gray-100);
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 .card__title,
 .button,
 .section__title {
-  font-family: 'Insaniburger with Cheese', sans-serif;
+  font-family: 'Cupid Love', sans-serif;
 }
 
 .section__subtitle,
 .card__ingredients {
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 .menu {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  height: auto;
   align-items: center;
+  justify-content: center;
   gap: 48px;
-  padding: 38px 45px 98px;
+  padding: 15px 250px 0px 250px;
 }
 
 .section__title {
   color: var(--black);
-  font-size: 64px;
+  font-size: 60px;
   line-height: 72px;
   font-weight: 400;
+  font-family: 'Roboto', sans-serif;
 }
 
 .section__subtitle {
@@ -140,6 +184,7 @@
 }
 
 .section__subtitle span {
+
   font-weight: 700;
 }
 
@@ -163,23 +208,29 @@
   background-size: cover;
   width: 100%;
   max-width: 900px;
-  padding: 40px 0;
+  padding: 40px 5px;
 }
 
 .card:nth-child(1) {
-  background-image: url('../images/menu/original.png');
+  background-image:  linear-gradient(rgba(29, 29, 29, 0.4), rgba(29, 29, 29, 0.4)), url('frango.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .card:nth-child(2) {
-  background-image: url('../images/menu/cheese-classic.png');
+  background-image: linear-gradient(rgba(29, 29, 29, 0.5), rgba(29, 29, 29, 0.5)), url('calabresa.jpg');
+  
 }
 
 .card:nth-child(3) {
-  background-image: url('../images/menu/bbq-bacon-burguer.png');
+  background-image:  linear-gradient(rgba(29, 29, 29, 0.5), rgba(29, 29, 29, 0.5)), url('mista.jpg');
 }
 
 .card:nth-child(4) {
-  background-image: url('../images/menu/bacon-beef.png');
+  background-image:  linear-gradient(rgba(29, 29, 29, 0.5), rgba(29, 29, 29, 0.5)), url('carnee.jpg');
+  background-repeat: no-repeat;
+
 }
 
 .card__title {
@@ -193,7 +244,7 @@
 .card__ingredients,
 .card__price {
   margin-left: auto;
-  margin-right: 53px;
+  margin-right: 2rem;
 }
 
 .card__ingredients {
@@ -205,7 +256,7 @@
 
 .card__ingredients,
 .button--primary {
-  color: var(--white);
+  color: rgb(255, 255, 255);
   float: right;
   margin: 12px, 5px;
 }
@@ -219,7 +270,8 @@
 }
 
 .button--primary:hover {
-  background-color: #E63946;
+  background-color: #6a0f17;
+  transition: all 200ms;
 }
 
 .card__price {
@@ -374,12 +426,13 @@
 
 .hero-header span {
   color: var(--primary);
+  font-family: 'Cupid Love', sans-serif;
 }
 
 .hero-header h1 {
-  font-size: 80px;
-  line-height: 70px;
-  font-family: 'Insaniburger with Cheese', sans-serif;
+  font-size: 120px;
+  line-height: 100px;
+  font-family: 'Brush', sans-serif;
 }
 
 .hero-header .button {
@@ -391,6 +444,10 @@
   align-items: center;
   overflow: hidden;
   height: 30rem;
+  background-image: linear-gradient(rgba(29, 29, 29, 0.8), rgba(29, 29, 29, 0.8)), url("fundopizza.jpg");
+  background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .hero-header__content {
@@ -438,7 +495,7 @@
   }
 
   .menu {
-    padding: 20px 24px 48px;
+    padding: 20px 24px 48px 24px;
     gap: 24px;
   }
 
@@ -505,4 +562,143 @@
   .footer__container {
     flex-direction: column;
   }
+}
+
+body table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 30px;
+}
+body table thead tr {
+  border-bottom: 2px solid #ccc;
+}
+body table thead th {
+  text-align: left;
+  padding-bottom: 6px;
+  text-transform: uppercase;
+  color: #666;
+}
+body table tbody tr {
+  border-bottom: 1px solid #ccc;
+}
+body table tbody tr:last-child {
+  border: 0;
+}
+body table tbody tr td {
+  padding: 18px 0px;
+  font-size: 17px;
+  margin-right: 9rem;
+}
+
+body .produto {
+  display: flex;
+  align-items: center;
+}
+body .produto img {
+  border-radius: 6px;
+}
+body .produto .info {
+  margin-left: 1.7rem;
+}
+body .produto .info .produto-nome {
+  font-size: 25px;
+}
+
+button {
+  cursor: pointer;
+}
+
+.qtd {
+  background-color: #eee;
+  display: inline-flex;
+  padding: 0 0;
+  height: 26px;
+  overflow: hidden;
+  justify-content: space-around;
+  min-width: 50px;
+  align-items: center;
+  border-radius: 20px;
+}
+.qtd span {
+  margin: 0 10px;
+}
+.qtd button {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: 0;
+  padding: 0 10px;
+  height: 100%;
+  font-size: 16px;
+}
+.qtd button:hover {
+  background-color: #ddd;
+  transition: all 200ms;
+}
+
+.delete {
+  background-color: #ae0f07;
+  border: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 27px;
+}
+.delete:hover {
+  background-color: #e04b4b;
+  transition: all 400ms;
+}
+
+aside {
+  margin-left: 4rem;
+}
+aside .box {
+  border-radius: 12px;
+  margin-bottom: 15px;
+  border: solid 1px #ccc;
+  background-color: #ddd;
+  font-size: 14px;
+  font-weight: 100;
+}
+aside .box header {
+  padding: 15px 20px;
+  font-size: 25px;
+  font-weight: 100;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+}
+aside .box .info {
+  padding: 20px;
+}
+aside .box .info > div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+  color: #333;
+}
+aside .box footer {
+  background-color: #d1d1d1;
+  padding: 15px 20px;
+  font-size: 22px;
+  display: flex;
+  justify-content: space-between;
+}
+aside > button {
+  border-radius: 12px;
+  border: 0;
+  padding: 15px 0;
+  color: white;
+  background-color: #28a745;
+  display: block;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 16px;
+}
+aside > button:hover {
+  background-color: #3bc55b;
+  transition: all 300ms;
 }
