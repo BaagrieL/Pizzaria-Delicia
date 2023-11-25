@@ -56,16 +56,6 @@
     text-align: center;
     transition: all 200ms ease-in;
   }
-
-  .navbar__title{
-    
-  }
-
-  .navbar__title:hover {
-    padding: 0.5rem 1rem 1.2rem 1rem;
-    color: #a91414;
-    border-bottom: 3px solid #a91414;
-  }
   
   .navbar__brand {
     display: flex;
@@ -93,11 +83,20 @@
     text-transform: uppercase;
     text-decoration: none;
     font-size: 20px;
+    transition: all 200ms;
+  }
+
+  .navbar__links li a:hover {
+    color: #a91414;
   }
 
   .navbar__links li a i {
     font-size: 30px;
+    color:#fff
+  }
 
+  .navbar__links li a i:hover {
+    color: #a91414;
   }
 
   
