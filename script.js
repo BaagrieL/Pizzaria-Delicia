@@ -31,3 +31,6 @@ function limparCarrinho() {
     total = 0;
     atualizarCarrinho();
 }
+
+const menuCelular = getElementById ('menuCelular');
+const links = getElementById ('');

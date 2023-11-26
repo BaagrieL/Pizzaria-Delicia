@@ -110,7 +110,8 @@
     text-transform: uppercase;
   }
   
-  @media (max-width: 1279px) {
+  @media (max-width: 1080px) {
+
     .navbar,
     .navbar__brand {
       flex-direction: column;
@@ -119,12 +120,23 @@
     .navbar__links {
       gap: 20px;
     }
+    
+
   }
+
+  @media (min-width: 900px ) {
+    .menu-celular {
+      display: none;
+    }
+  }
+
   
   @media (max-width: 767px) {
     .navbar__links {
       flex-direction: column;
+      display: none;
     }
+    
   
     .navbar__title {
       font-size: 20px;
@@ -134,11 +146,56 @@
     .navbar__links li a {
       font-size: 16px;
       line-height: 20px;
+      display: none;
     }
+
+    .menu-celular {
+      display: block;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+    }
+    .line {
+      fill: none;
+      stroke: #fff;
+      stroke-width: 6;
+      transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+        stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .line1 {
+      stroke-dasharray: 60 207;
+      stroke-width: 6;
+    }
+    .line2 {
+      stroke-dasharray: 60 60;
+      stroke-width: 6;
+    }
+    .line3 {
+      stroke-dasharray: 60 207;
+      stroke-width: 6;
+    }
+    .opened .line1 {
+      stroke-dasharray: 90 207;
+      stroke-dashoffset: -134;
+      stroke-width: 6;
+    }
+    .opened .line2 {
+      stroke-dasharray: 1 60;
+      stroke-dashoffset: -30;
+      stroke-width: 6;
+    }
+    .opened .line3 {
+      stroke-dasharray: 90 207;
+      stroke-dashoffset: -134;
+      stroke-width: 6;
+    }
+
+    
   }
   
   body {
-    font-size: 62.5%;
+  font-size: 62.5%;
   background-color: var(--gray-100);
   overflow-x: hidden;
   scroll-behavior: smooth;
@@ -165,6 +222,8 @@
   gap: 48px;
   padding: 15px 5%;
 }
+
+
 
 .section__title {
   color: var(--black);
