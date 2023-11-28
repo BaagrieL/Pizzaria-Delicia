@@ -5,7 +5,10 @@ function adicionarAoCarrinho(nome, preco) {
     cartItems.push({ nome, preco });
     total += preco;
 
+    localStorage.setItem('total', total);
+
     atualizarCarrinho();
+    mostrarCarrinho();
 }
 
 function atualizarCarrinho() {
@@ -32,5 +35,7 @@ function limparCarrinho() {
     atualizarCarrinho();
 }
 
-const menuCelular = getElementById ('menuCelular');
-const links = getElementById ('');
+function mostrarCarrinho() {
+    const carrinho = document.getElementById('drinksID');
+    carrinho.style.display = "flex"
+}

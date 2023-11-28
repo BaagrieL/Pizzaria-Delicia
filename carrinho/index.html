@@ -39,7 +39,7 @@
                                     </div>
                                 </div>
                             </td>
-                            <td>R$ 20</td>
+                            <td class="preco" id="preco">R$ 20</td>
                             <td>
                                 <div class="qtd">
                                     <button><i class='bx bx-minus'></i></button>
@@ -47,7 +47,7 @@
                                     <button><i class='bx bx-plus'></i></button>
                                 </div>
                             </td>
-                            <td>R$ 40</td>
+                            <td class="total">R$ 40</td>
                             <td>
                                 <button class="delete"><i class='bx bx-x'></i></button>
                             </td>
@@ -64,9 +64,9 @@
                             <td>R$ 20</td>
                             <td>
                                 <div class="qtd">
-                                    <button><i class='bx bx-minus'></i></button>
+                                    <button onclick="atualizarQuantidade(-1)"><i class='bx bx-minus'></i></button>
                                     <span>1</span>
-                                    <button><i class='bx bx-plus'></i></button>
+                                    <button onclick="atualizarQuantidade(1)"><i class='bx bx-plus'></i></button>
                                 </div>
                             </td>
                             <td>R$ 40</td>
@@ -106,7 +106,7 @@
                     <div class="info">
                         <div class="">
                             <span>Sub-total</span>
-                            <span>R$ 20</span>
+                            <span class="subTotalValor">R$ 20</span>
                         </div>
                         <div class="">
                             <span>Frete</span>
@@ -114,18 +114,19 @@
                         </div>
                         <div class="">
                             <span>Total</span>
-                            <span>R$ 20</span>
+                            <span class="totalGeralValor">R$ 20</span>
                         </div>
                     </div>
                     <footer>
                         <span>Total</span>
-                        <span>R$ 20</span>
+                        <span id="total">R$ 20</span>
                     </footer>
                 </div>
-                <button>Finalizar compra</button>
+                <button id="finalizar">Finalizar compra</button>
             </aside>
         </div>
     </main>
+    <script src="carrinho.js"></script>
 </body>
 
 </html>
