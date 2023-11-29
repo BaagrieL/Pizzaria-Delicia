@@ -350,6 +350,8 @@
 
 #drinksID {
   display: none;
+  left: 0;
+  justify-content: left;
 }
 
 .drinks h2 {
@@ -383,7 +385,6 @@
 
 .drinks__container {
   display: flex;
-  justify-content: center;
   width: 100%;
   position: relative;
 }
@@ -668,7 +669,7 @@ body table tbody tr:last-child {
   border: 0;
 }
 body table tbody tr td {
-  padding: 18px 0px;
+  padding: 18px 20px;
   font-size: 17px;
   margin-right: 9rem;
   

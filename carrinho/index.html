@@ -1,6 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,98 +5,95 @@
     <link rel="shortcut icon" href="../imagens/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-</head>
-
-<body>
-    <header>
-        <span>Pizzaria <b>Delicia</b></span>
-    </header>
-    <main>
-        <div class="titulo-pagina">Seu carrinho</div>
-
-        <div class="conteudo">
-            <section>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Produto</th>
-                            <th>Preço</th>
-                            <th>Quantidade</th>
-                            <th>Total</th>
-                            <th>-</th>
-
-                        </tr>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <div class="produto">
-                                    <img src="https://picsum.photos/70/80" alt="">
-                                    <div class="info">
-                                        <div class="produto-nome"><b>Nome da pizza</b></div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="preco" id="preco">R$ 20</td>
-                            <td>
-                                <div class="qtd">
-                                    <button><i class='bx bx-minus'></i></button>
-                                    <span>1</span>
-                                    <button><i class='bx bx-plus'></i></button>
-                                </div>
-                            </td>
-                            <td class="total">R$ 40</td>
-                            <td>
-                                <button class="delete"><i class='bx bx-x'></i></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="produto">
-                                    <img src="https://picsum.photos/70/80" alt="">
-                                    <div class="info">
-                                        <div class="produto-nome"><b>Nome da pizza</b></div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>R$ 20</td>
-                            <td>
-                                <div class="qtd">
-                                    <button onclick="atualizarQuantidade(-1)"><i class='bx bx-minus'></i></button>
-                                    <span>1</span>
-                                    <button onclick="atualizarQuantidade(1)"><i class='bx bx-plus'></i></button>
-                                </div>
-                            </td>
-                            <td>R$ 40</td>
-                            <td>
-                                <button class="delete"><i class='bx bx-x'></i></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="produto">
-                                    <img src="https://picsum.photos/70/80" alt="">
-                                    <div class="info">
-                                        <div class="produto-nome"><b>Nome da pizza</b></div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>R$ 20</td>
-                            <td>
-                                <div class="qtd">
-                                    <button><i class='bx bx-minus'></i></button>
-                                    <span>1</span>
-                                    <button><i class='bx bx-plus'></i></button>
-                                </div>
-                            </td>
-                            <td>R$ 40</td>
-                            <td>
-                                <button class="delete"><i class='bx bx-x'></i></button>
-                            </td>
-                        </tr>
-                    </tbody>
-                    </thead>
-                </table>
-            </section>
+  </head>
+            <body>
+                <header>
+                    <span>Pizzaria <b>Delicia</b></span>
+                </header>
+                <main>
+                    <div class="titulo-pagina">Seu carrinho</div>
+            
+                    <div class="conteudo">
+                        <section>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Produto</th>
+                                        <th>Preço</th>
+                                        <th>Quantidade</th>
+                                        <th>Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="produto">
+                                                <img src="https://picsum.photos/70/80" alt="">
+                                                <div class="info">
+                                                    <div class="produto-nome"><b>Nome da pizza</b></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="preco" id="preco">R$ 20</td>
+                                        <td>
+                                            <div class="qtd" data-index="0">
+                                                <button data-action="minus"><i class='bx bx-minus'></i></button>
+                                                <span>1</span>
+                                                <button data-action="plus"><i class='bx bx-plus'></i></button>
+                                            </div>
+                                        </td>
+                                        <td class="total">R$ 20</td>
+                                        <td>
+                                            <button class="delete"><i class='bx bx-x'></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="produto">
+                                                <img src="https://picsum.photos/70/80" alt="">
+                                                <div class="info">
+                                                    <div class="produto-nome"><b>Nome da pizza</b></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="preco">R$ 20</td>
+                                        <td>
+                                            <div class="qtd" data-index="1">
+                                                <button data-action="minus"><i class='bx bx-minus'></i></button>
+                                                <span>1</span>
+                                                <button data-action="plus"><i class='bx bx-plus'></i></button>
+                                            </div>
+                                        </td>
+                                        <td class="total">R$ 20</td>
+                                        <td>
+                                            <button class="delete"><i class='bx bx-x'></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="produto">
+                                                <img src="https://picsum.photos/70/80" alt="">
+                                                <div class="info">
+                                                    <div class="produto-nome"><b>Nome da pizza</b></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="preco">R$ 20</td>
+                                        <td>
+                                            <div class="qtd" data-index="2">
+                                                <button data-action="minus"><i class='bx bx-minus'></i></button>
+                                                <span>1</span>
+                                                <button data-action="plus"><i class='bx bx-plus'></i></button>
+                                            </div>
+                                        </td>
+                                        <td class="total">R$ 20</td>
+                                        <td>
+                                            <button class="delete"><i class='bx bx-x'></i></button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </section>
             <aside>
                 <div class="box">
                     <header>Resumo da compra</header>
@@ -112,14 +106,10 @@
                             <span>Frete</span>
                             <span>Gratuito</span>
                         </div>
-                        <div class="">
-                            <span>Total</span>
-                            <span class="totalGeralValor">R$ 20</span>
-                        </div>
                     </div>
                     <footer>
                         <span>Total</span>
-                        <span id="total">R$ 20</span>
+                        <span id="totalFinal">R$ 20</span>
                     </footer>
                 </div>
                 <button id="finalizar">Finalizar compra</button>
@@ -127,6 +117,6 @@
         </div>
     </main>
     <script src="carrinho.js"></script>
-</body>
-
-</html>
+  </body>
+  
+  </html>
