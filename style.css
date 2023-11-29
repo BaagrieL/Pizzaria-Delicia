@@ -285,11 +285,10 @@
 
 .card:nth-child(3) {
   background-image:  linear-gradient(rgba(29, 29, 29, 0.5), rgba(29, 29, 29, 0.5)), url('imagens/mista.jpg');
-  height: 100%;
 }
 
 .card:nth-child(4) {
-  background-image:  linear-gradient(rgba(29, 29, 29, 0.5), rgba(29, 29, 29, 0.5)), url('imagens/carne.webp');
+  background-image:  linear-gradient(rgba(29, 29, 29, 0.5), rgba(29, 29, 29, 0.5)), url('imagens/carne.jpg');
   background-repeat: no-repeat;
 
 }
@@ -528,7 +527,7 @@
   align-items: center;
   overflow: hidden;
   height: 30rem;
-  background-image: linear-gradient(rgba(29, 29, 29, 0.8), rgba(29, 29, 29, 0.8)), url("fundopizza.jpg");
+  background-image: linear-gradient(rgba(29, 29, 29, 0.8), rgba(29, 29, 29, 0.8)), url("imagens/fundopizza.jpg");
   background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
