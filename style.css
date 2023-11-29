@@ -285,6 +285,7 @@
 
 .card:nth-child(3) {
   background-image:  linear-gradient(rgba(29, 29, 29, 0.5), rgba(29, 29, 29, 0.5)), url('imagens/mista.jpg');
+  height: 100%;
 }
 
 .card:nth-child(4) {
