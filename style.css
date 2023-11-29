@@ -340,13 +340,17 @@
 }
 
 .drinks {
-  display: none;
+  display: flex;
   border: 4px solid var(--gray-900);
   border-radius: 44px;
   padding: 44px 64px;
   width: 45%;
   max-width: 1200px;
 
+}
+
+#drinksID {
+  display: none;
 }
 
 .drinks h2 {
@@ -380,7 +384,7 @@
 
 .drinks__container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   width: 100%;
   position: relative;
 }
@@ -415,6 +419,10 @@
   font-size: 18px;
   font-weight: bold;
   margin-top: 5px;
+}
+
+.cart {
+  width: 100%;
 }
 
 .section {
@@ -664,6 +672,7 @@ body table tbody tr td {
   padding: 18px 0px;
   font-size: 17px;
   margin-right: 9rem;
+  
 }
 
 body .produto {
@@ -713,7 +722,8 @@ button {
 }
 
 .delete {
-  background-color: #ae0f07;
+  margin-left: 50px;
+  background-color: transparent;
   border: 0;
   width: 30px;
   height: 30px;
@@ -724,8 +734,8 @@ button {
   font-size: 27px;
 }
 .delete:hover {
-  background-color: #e04b4b;
-  transition: all 400ms;
+  background-color: #4dce7a;
+  transition: all 400ms ease-in;
 }
 
 aside {
