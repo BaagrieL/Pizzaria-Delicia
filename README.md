@@ -1,7 +1,7 @@
 # 🍕 Pizzaria Delícia
 
-Um projeto fictício de uma pizzaria, desenvolvido para a feira de cursos. O objetivo é apresentar funcionalidades interativas e um design atrativo utilizando **HTML**, **CSS** e **JavaScript**.
-<img src='./imagens/pizzaria-delicia.webm' height="400px" width="700px">
+Um projeto fictício de uma pizzaria, desenvolvido para a feira de cursos. O objetivo é apresentar funcionalidades interativas e um design atrativo utilizando **HTML**, **CSS** e **JavaScript**.  
+<img src='./imagens/pizzaria-gif.webp' height="400px" width="700px">
 
 ---
 
