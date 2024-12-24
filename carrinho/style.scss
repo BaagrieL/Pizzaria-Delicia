@@ -1,10 +1,15 @@
-//box icons para pegar os icones de carrinho e tals
+@import url("https://fonts.cdnfonts.com/css/cupid-love-2");
 
 * {
     padding: 0;
     margin: 0;
     border: none;
     box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 body {
@@ -19,6 +24,17 @@ body {
 
         display: flex;
         justify-content: center;
+
+        > a {
+            > span {
+                font-family: 'Cupid Love', sans-serif;
+                letter-spacing: 3px;
+
+                > b {
+                    color: #dd2d2d;
+                }
+            }
+        }
     }
 
     > main {
@@ -190,7 +206,7 @@ aside {
         }
     }
 
-    > button {
+    > #finalizar {
         border-radius: 12px;
         border: 0;
         padding: 15px 0;
@@ -207,4 +223,89 @@ aside {
             transition: all 300ms;
         }
     }
+}
+
+
+@media (max-width: 768px) {
+  body > main {
+    padding: 0;
+  }
+  
+  .conteudo {
+    display: flex;
+    flex-direction: column;
+    padding: 0 5px;
+  }
+
+  aside {
+    display: block;
+    width: 100%;
+    margin: 20px 0 10px 0;
+  }
+
+  body table {
+    width: 100%;
+    table-layout: fixed;
+    margin: 0;
+  }
+
+  thead tr{
+    display: flex;
+    gap: 29px;
+    font-size: 10px;
+  }
+
+  tbody {
+    width: 100%;
+  }
+
+  tbody tr {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+    max-width: 100%;
+  }
+
+  body table tbody tr td {
+    margin: 0;
+    padding: 10px 0;
+    font-size: 12px;
+    align-self: center;
+    min-width: 70px;
+  }
+
+  body table tbody tr td:last-child { 
+    min-width: 0;
+  }
+  body .produto {
+    width: min-content;
+  }
+
+  body .produto img{
+    display: none;
+  }
+
+  body .produto .info .produto-nome {
+    font-size: 15px;
+  }
+
+  body .produto .info {
+    margin: 3px;
+    width: min-content;
+  }
+
+  .qtd span {
+    margin: 0;
+  }
+
+  .delete {
+    width: 20px;
+    height: 20px;
+    font-size: 17px;
+  }
+
+  .total,
+  .preco {
+    text-align: center;
+  }
 }

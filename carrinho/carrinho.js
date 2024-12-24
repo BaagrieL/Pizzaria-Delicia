@@ -63,6 +63,4 @@ document.addEventListener('DOMContentLoaded', function () {
     finalizarBtn.addEventListener('click', function () {
         alert('Compra finalizada! Total: R$' + total.toFixed(2));
     });
-    
-    // Restante do seu código, se houver...
 });
