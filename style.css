@@ -16,6 +16,8 @@
   --gray-900: #14100c;
   --primary: #dd2d2d;
   --white: #fff;
+  --carrinho-content: "";
+  --is-quantidade-carrinho-visivel: hidden;
 }
 
 main {
@@ -34,6 +36,27 @@ main {
   font-family: "Cupid Love", sans-serif;
   gap: 20px;
   z-index: 1;
+}
+
+#carrinho-icon {
+  position: relative;
+}
+
+#carrinho-icon::after {
+  content: var(--carrinho-content);
+  visibility: var(--is-quantidade-carrinho-visivel);
+  position: absolute;
+  top: -3px;
+  right: -10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15px;
+  height: 15px;
+  background-color: #dd2d2d;
+  color: #ccc;
+  border-radius: 50%;
+  font-size: 12px;
 }
 
 #finalizar {
@@ -371,21 +394,26 @@ body table {
   border-collapse: collapse;
   margin: 0 30px;
 }
+
 body table thead tr {
   border-bottom: 2px solid #ccc;
 }
+
 body table thead th {
   text-align: left;
   padding-bottom: 6px;
   text-transform: uppercase;
   color: #666;
 }
+
 body table tbody tr {
   border-bottom: 1px solid #ccc;
 }
+
 body table tbody tr:last-child {
   border: 0;
 }
+
 body table tbody tr td {
   padding: 18px 20px;
   font-size: 17px;
@@ -396,12 +424,15 @@ body .produto {
   display: flex;
   align-items: center;
 }
+
 body .produto img {
   border-radius: 6px;
 }
+
 body .produto .info {
   margin-left: 1.7rem;
 }
+
 body .produto .info .produto-nome {
   font-size: 25px;
 }
@@ -421,9 +452,11 @@ button {
   align-items: center;
   border-radius: 20px;
 }
+
 .qtd span {
   margin: 0 10px;
 }
+
 .qtd button {
   display: flex;
   align-items: center;
@@ -433,6 +466,7 @@ button {
   height: 100%;
   font-size: 16px;
 }
+
 .qtd button:hover {
   background-color: #ddd;
   transition: all 200ms;
@@ -450,14 +484,20 @@ button {
   justify-content: center;
   font-size: 27px;
 }
+
 .delete:hover {
   background-color: #4dce7a;
-  transition: all 400ms ease-in;
+  transition: all 300ms ease-in;
+}
+
+.delete:active {
+  background-color: #36a85e;
 }
 
 aside {
   margin-left: 4rem;
 }
+
 aside .box {
   border-radius: 12px;
   margin-bottom: 15px;
@@ -466,6 +506,7 @@ aside .box {
   font-size: 14px;
   font-weight: 100;
 }
+
 aside .box header {
   padding: 15px 20px;
   font-size: 25px;
@@ -473,15 +514,18 @@ aside .box header {
   text-align: center;
   border-bottom: 1px solid #ccc;
 }
+
 aside .box .info {
   padding: 20px;
 }
-aside .box .info > div {
+
+aside .box .info>div {
   display: flex;
   justify-content: space-between;
   margin-bottom: 6px;
   color: #333;
 }
+
 aside .box footer {
   background-color: #d1d1d1;
   padding: 15px 20px;
@@ -489,7 +533,8 @@ aside .box footer {
   display: flex;
   justify-content: space-between;
 }
-aside > button {
+
+aside>button {
   border-radius: 12px;
   border: 0;
   padding: 15px 0;
@@ -502,7 +547,7 @@ aside > button {
   font-size: 16px;
 }
 
-aside > button:hover {
+aside>button:hover {
   background-color: #3bc55b;
   transition: all 300ms;
 }
@@ -528,9 +573,16 @@ aside > button:hover {
     width: 60px;
   }
 
-  .navbar__links {
-    flex-direction: column;
+  .navbar__links > * {
     display: none;
+  }
+
+  .navbar__links>:first-child {
+    display: block;
+  }
+
+  #carrinho-icon::after {
+    right: 6px;
   }
 
   .navbar__title {
@@ -541,7 +593,9 @@ aside > button:hover {
   .navbar__links li a {
     font-size: 16px;
     line-height: 20px;
-    display: none;
+    color: #000;
+    padding: 10px 15px;
+    width: 100%;
   }
 
   .menu-celular {
@@ -550,6 +604,7 @@ aside > button:hover {
     border: none;
     cursor: pointer;
     padding: 0;
+    z-index: 1;
   }
 
   .hero-header {
@@ -570,28 +625,34 @@ aside > button:hover {
       stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
       stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
   }
+
   .line1 {
     stroke-dasharray: 60 207;
     stroke-width: 6;
   }
+
   .line2 {
     stroke-dasharray: 60 60;
     stroke-width: 6;
   }
+
   .line3 {
     stroke-dasharray: 60 207;
     stroke-width: 6;
   }
+
   .opened .line1 {
     stroke-dasharray: 90 207;
     stroke-dashoffset: -134;
     stroke-width: 6;
   }
+
   .opened .line2 {
     stroke-dasharray: 1 60;
     stroke-dashoffset: -30;
     stroke-width: 6;
   }
+
   .opened .line3 {
     stroke-dasharray: 90 207;
     stroke-dashoffset: -134;
@@ -615,7 +676,7 @@ aside > button:hover {
 
   .card__title {
     font-size: 20px;
-    
+
   }
 
   .card__title,
@@ -645,6 +706,7 @@ aside > button:hover {
   body table tbody tr td {
     padding: 8px 8px;
   }
+
 
   iframe {
     height: 310px;

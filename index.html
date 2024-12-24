@@ -22,23 +22,11 @@
       </div>
 
       <ul class="navbar__links">
-        <li><a href="carrinho/index.html"><i class='bx bx-cart'></i></a></li>
+        <li><a href="carrinho/index.html" id="carrinho-icon"><i class='bx bx-cart'></i></a></li>
         <li><a href="#menu">cardápio</a></li>
         <li><a href="#drinks">bebidas</a></li>
         <li><a href="#location">localização</a></li>
       </ul>
-
-      <button id="menuCelular" class="menu-celular"
-        onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))"
-        aria-label="Main Menu">
-        <svg width="100" height="100" viewBox="0 0 100 100">
-          <path class="line line1"
-            d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
-          <path class="line line2" d="M 20,50 H 80" />
-          <path class="line line3"
-            d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
-        </svg>
-      </button>
     </nav>
 
     <!-- Cabeçalho -->
@@ -75,8 +63,7 @@
           </ul>
 
           <button class="button button--primary card__price"
-            onclick="adicionarAoCarrinho('Frango ', 18)">R$18,00</button>
-
+            onclick="adicionarAoCarrinho('Frango', 18)">R$18,00</button>
         </div>
 
         <div class="card">
@@ -92,7 +79,7 @@
           </ul>
 
           <button class="button button--primary card__price"
-            onclick="adicionarAoCarrinho('Portuguesa ', 20)">R$20,00</button>
+            onclick="adicionarAoCarrinho('Calabresa', 20)">R$20,00</button>
         </div>
 
         <div class="card">
@@ -106,7 +93,7 @@
           </ul>
 
           <button class="button button--primary card__price"
-            onclick="adicionarAoCarrinho('Mista ', 18)">R$18,00</button>
+            onclick="adicionarAoCarrinho('Mista', 18)">R$18,00</button>
         </div>
 
         <div class="card">
@@ -149,7 +136,7 @@
               <td>R$ 5</td>
 
               <td>
-                <button class="delete"><i class='bx bx-cart-add'></i></button>
+                <button class="delete" onclick="adicionarAoCarrinho('Pepsi', 5)"><i class='bx bx-cart-add'></i></button>
               </td>
             </tr>
 
@@ -159,7 +146,7 @@
               </td>
               <td>R$ 7</td>
               <td>
-                <button class="delete"><i class='bx bx-cart-add'></i></button>
+                <button class="delete" onclick="adicionarAoCarrinho('Fanta', 7)"><i class='bx bx-cart-add'></i></button>
               </td>
             </tr>
 
@@ -169,7 +156,7 @@
               </td>
               <td>R$ 8</td>
               <td>
-                <button class="delete"><i class='bx bx-cart-add'></i></button>
+                <button class="delete" onclick="adicionarAoCarrinho('Coca-cola', 8)"><i class='bx bx-cart-add'></i></button>
               </td>
             </tr>
 
@@ -179,7 +166,7 @@
               </td>
               <td>R$ 2,50</td>
               <td>
-                <button class="delete"><i class='bx bx-cart-add'></i></button>
+                <button class="delete" onclick="adicionarAoCarrinho('Água', 2.50)"><i class='bx bx-cart-add'></i></button>
               </td>
             </tr>
 
@@ -189,7 +176,7 @@
               </td>
               <td>R$ 7</td>
               <td>
-                <button class="delete"><i class='bx bx-cart-add'></i></button>
+                <button class="delete" onclick="adicionarAoCarrinho('São Geraldo', 7)"><i class='bx bx-cart-add'></i></button>
               </td>
             </tr>
 
@@ -199,7 +186,7 @@
               </td>
               <td>R$ 8</td>
               <td>
-                <button class="delete"><i class='bx bx-cart-add'></i></button>
+                <button class="delete" onclick="adicionarAoCarrinho('Sprite', 8)"><i class='bx bx-cart-add'></i></button>
               </td>
             </tr>
 
@@ -209,7 +196,7 @@
               </td>
               <td>R$ 12</td>
               <td>
-                <button class="delete"><i class='bx bx-cart-add'></i></button>
+                <button class="delete" onclick="adicionarAoCarrinho('Suco natural', 12)"><i class='bx bx-cart-add'></i></button>
               </td>
             </tr>
           </tbody>
