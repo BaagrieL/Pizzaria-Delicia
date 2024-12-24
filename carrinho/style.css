@@ -226,6 +226,12 @@ aside > #finalizar:hover {
     align-self: center;
     min-width: 70px;
   }
+  body table thead tr {
+    gap: 10px;
+  }
+  body table thead tr th {
+    min-width: 70px;
+  }
   body table tbody tr td:last-child {
     min-width: 0;
   }
