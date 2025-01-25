@@ -11,7 +11,7 @@ export class ProdutoView {
                 <tr>
                     <td>
                         <div class="produto">
-                            <img src="../../imagens/pizza-icon.png" alt="" height="60px">
+                            <img src="../imagens/pizza-icon.png" alt="" height="60px">
                             <div class="info">
                                 <div class="produto-nome"><b>${produto.nome}</b></div>
                             </div>
